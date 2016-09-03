@@ -20,10 +20,12 @@ html{
     background: url('anonymous.jpg') right center no-repeat;
     position: relative;
 }
+.banner{
+  padding-right: 50%;    
+  text-align: center;
+}
 h1{
-    font-family: 'Monoton', cursive;
-    padding-right: 50%;    
-    text-align: center;
+    font-family: 'Monoton', cursive;    
     margin: 0;
     font-size: 70px;
     text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
