@@ -1,27 +1,26 @@
-## Hacked page template.
+## Заглушка для хакнутой страницы
 
 
-[How it looks](https://tarokinoe.github.io/hacked_page/)
+[Как это выглядит](https://tarokinoe.github.io/hacked_page/)
 
-### Kali usage example:
-Let's say you want to make a joke with your friend and "hack" his web-site.  
-We wil use [Kali linux](https://www.kali.org/).
+### Пример использования:
+В данном примере мы подменим страницу какого-нибудь сайта на нашу заглушку с помощью атаки [DNS spoofing] (https://en.wikipedia.org/wiki/DNS_spoofing). Для этого будем использовать [Kali linux](https://www.kali.org/).
 
-Look your ip
+Получим ваш ip-адрес
 ```
 ifconfig
 ```
-let your ip is 192.168.0.30
+Пусть это будет 192.168.0.30
 
-Scan network:
+Сканируем сеть, чтобы узнать ip шлюза и атакуемого:
 ```
 nmap -sn 192.168.0.0/24
 ```
-let:
-- 192.168.0.1 - gateway  
-- 192.168.0.20 - victim  
-- 192.168.0.30 - your ip  
-- example.com - victim's site domain name
+Допустим мы получили такой результат:
+- 192.168.0.1 - шлюз  
+- 192.168.0.20 - адрес атакуемого  
+- 192.168.0.30 - ваш ip  
+- example.com - домен атакуемого
 
 ```
 cd /var/www/html/
